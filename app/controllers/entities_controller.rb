@@ -15,7 +15,8 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
-    @entity = Entity.new
+    @entity = Entity.first
+
   end
 
   # GET /entities/1/edit

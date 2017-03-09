@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @field.name %>
+</p>
+
+<p>
+  <strong>Normal price:</strong>
+  <%= @field.normal_price %>
+</p>
+
+<p>
+  <strong>Special price:</strong>
+  <%= @field.special_price %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @field.active %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @field.other %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @field.type %>
+</p>
+
+<p>
+  <strong>Url1:</strong>
+  <%= @field.url1 %>
+</p>
+
+<p>
+  <strong>Url2:</strong>
+  <%= @field.url2 %>
+</p>
+
+<p>
+  <strong>Url3:</strong>
+  <%= @field.url3 %>
+</p>
+
+<p>
+  <strong>Entity:</strong>
+  <%= @field.entity %>
+</p>
+
+<%= link_to 'Edit', edit_field_path(@field) %> |
+<%= link_to 'Back', fields_path %>
