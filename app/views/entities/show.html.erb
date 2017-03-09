@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @entity.name %>
+</p>
+
+<p>
+  <strong>Cif:</strong>
+  <%= @entity.cif %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @entity.address %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @entity.postal_code %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @entity.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @entity.country %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @entity.bank %>
+</p>
+
+<p>
+  <strong>Paypal:</strong>
+  <%= @entity.paypal %>
+</p>
+
+<%= link_to 'Edit', edit_entity_path(@entity) %> |
+<%= link_to 'Back', entities_path %>
