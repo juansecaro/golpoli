@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Advertisers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Cif</th>
+      <th>City</th>
+      <th>Postal code</th>
+      <th>Bank</th>
+      <th>Paypal</th>
+      <th>Other</th>
+      <th>Price</th>
+      <th>Start date</th>
+      <th>Duration</th>
+      <th>Url1</th>
+      <th>Url2</th>
+      <th>Url3</th>
+      <th>Active url</th>
+      <th>Active</th>
+      <th>Entity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @advertisers.each do |advertiser| %>
+      <tr>
+        <td><%= advertiser.name %></td>
+        <td><%= advertiser.address %></td>
+        <td><%= advertiser.cif %></td>
+        <td><%= advertiser.city %></td>
+        <td><%= advertiser.postal_code %></td>
+        <td><%= advertiser.bank %></td>
+        <td><%= advertiser.paypal %></td>
+        <td><%= advertiser.other %></td>
+        <td><%= advertiser.price %></td>
+        <td><%= advertiser.start_date %></td>
+        <td><%= advertiser.duration %></td>
+        <td><%= advertiser.url1 %></td>
+        <td><%= advertiser.url2 %></td>
+        <td><%= advertiser.url3 %></td>
+        <td><%= advertiser.active_url %></td>
+        <td><%= advertiser.active %></td>
+        <td><%= advertiser.entity %></td>
+        <td><%= link_to 'Show', advertiser %></td>
+        <td><%= link_to 'Edit', edit_advertiser_path(advertiser) %></td>
+        <td><%= link_to 'Destroy', advertiser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Advertiser', new_advertiser_path %>
