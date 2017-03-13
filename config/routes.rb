@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  root 'entitity#index'
+
   resources :advertisers
   resources :fields
   resources :entities
