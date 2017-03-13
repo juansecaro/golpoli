@@ -5,6 +5,7 @@ class EntitiesController < ApplicationController
   # GET /entities.json
   def index
     @entities = Entity.all
+
   end
 
   # GET /entities/1
@@ -15,7 +16,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
-    @entity = Entity.first
+    @entity = Entity.new
 
   end
 

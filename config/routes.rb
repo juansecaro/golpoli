@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
 
+  root 'static_pages#home'
+
+  get 'static_pages/home'
+
+  get 'static_pages/tour'
+
+  get 'static_pages/contact'
+
+  get 'static_pages/pricing'
+
+  get 'static_pages/testimonials'
+
   devise_for :users
-  root 'entitity#index'
 
   resources :advertisers
   resources :fields
