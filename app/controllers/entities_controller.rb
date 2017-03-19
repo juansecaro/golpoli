@@ -14,7 +14,7 @@ class EntitiesController < ApplicationController
 
   end
   def listf (name)
-    @city = Entity.where(city: name)
+    @city = Entity.find_by(city: name)
     @list_fields = @city.fields.all
   end
   # GET /entities/new
