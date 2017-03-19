@@ -13,9 +13,9 @@ class EntitiesController < ApplicationController
   def show
 
   end
-  def listf
-    @city = Entity.find_by(city: 'llerena')
-    @list = @city.fields.all
+  def listf (name)
+    @city = Entity.where(city: name)
+    @list_fields = @city.fields.all
   end
   # GET /entities/new
   def new
