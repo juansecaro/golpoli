@@ -6,7 +6,7 @@ class CreateFields < ActiveRecord::Migration[5.0]
       t.decimal :special_price
       t.boolean :active
       t.text :other
-      t.string :type
+      t.string :kind
       t.string :url1
       t.string :url2
       t.string :url3

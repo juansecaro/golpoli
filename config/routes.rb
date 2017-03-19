@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'static_pages/pricing'
 
   get 'static_pages/testimonials'
+  get '/entities/listf', to: 'entities#listf'
 
   devise_for :users
 

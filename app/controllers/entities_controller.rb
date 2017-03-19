@@ -13,11 +13,13 @@ class EntitiesController < ApplicationController
   def show
 
   end
-
+  def listf
+    @city = Entity.find_by(city: 'llerena')
+    @list = @city.fields.all
+  end
   # GET /entities/new
   def new
     @entity = Entity.new
-
   end
 
   # GET /entities/1/edit
