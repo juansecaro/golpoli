@@ -20,18 +20,19 @@ Considerations:
         - 2 -> Already reserved for another user
         - 3 -> Blocked by admin or mod (maintenance, other uses, etc)
 
-    - Each row in the Schedule will represent a day, when a day pass, a roll will be erased and a new one will
-    appear. Then plan is that this table always have only 22 rows: past week, today and 2 week up front.
-     (Circular queue)
+    - Each row in the Schedule will represent a day, when a day pass, a roll will be erased and a new
+    one will appear. Then plan is that this table always have only 22 rows: past week, today and
+    2 weeks up front. (Circular queue)
 
     - Each entity will have a mod in charge of assigning timetables, availability and resolving issues
      in their scope
 
-    - Each field may have different opening hours and different tariffs depending on the hour and the day
-    of the week. And due to UX issues, we want to make mods easy their work and we will have default configs.
+    - Each field may have different opening hours and different tariffs depending on the hour and
+    the day of the week. And due to UX issues, we want to make mods easy their work and we will
+    have default configs.
 
-    - There will be an "Appintments" model where we will save the info of reservations, method of payment,
-    amount, field and entity -yet to be created-.
+    - There will be an "Appintments" model where we will save the info of reservations, method of
+    payment, amount, field and entity -yet to be created-.
 
     - For users I've used devise, but direct login through Facebook and Google shall be implemented.
 
