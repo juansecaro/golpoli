@@ -5,7 +5,6 @@ class EntitiesController < ApplicationController
   # GET /entities.json
   def index
     @entities = Entity.all
-
   end
 
   # GET /entities/1
@@ -13,9 +12,9 @@ class EntitiesController < ApplicationController
   def show
 
   end
-  def listf (name)
-    @city = Entity.find_by(city: name)
-    @list_fields = @city.fields.all
+  def listf
+    @city = Entity.where(city: params[:name]).first
+    @list_fields = @city.fields
   end
   # GET /entities/new
   def new
