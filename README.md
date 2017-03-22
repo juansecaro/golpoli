@@ -31,11 +31,12 @@ Considerations:
     the day of the week. And due to UX issues, we want to make mods easy their work and we will
     have default configs.
 
-    - There will be an "Appintments" model where we will save the info of reservations, method of
+    - There will be an "Appointments" model where we will save the info of reservations, method of
     payment, amount, field and entity -yet to be created-.
 
     - For users I've used devise, but direct login through Facebook and Google shall be implemented.
 
     - Stripe and Paypal will be the options for payments.
 
-* ...
+
+This file will be updated as the project keeps advancing.

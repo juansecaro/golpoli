@@ -1,8 +1,26 @@
-<h1>Pistas disponibles</h1>
-<% @list_fields.each do |field| %>
+<h1>Pistas disponibles en <%= @city.name %></h1>
+<% @city.fields.each do |field| %>
 <p>
-<h2><%= field.name %></h2>
-  <h3> normal price: <%= field.normal_price %></h3>
-  <h3> special price: <%=field.special_price %></h3>
+    <div class="row">
+      <div class="col-md-4">
+          <% case field.kind %>
+            <% when 'futbol'%>
+              <%= link_to image_tag(field.url1, class:"img-rounded", alt: "Futbol"),'http://rubyonrails.org/' %>
+            <% when 'futsal'%>
+              <%= link_to image_tag("polillerena.jpg", class:"img-rounded", alt: "Futbol sala"),'http://rubyonrails.org/' %>
+            <% when 'padel'%>
+              <%= link_to image_tag("raqueta_padel.jpg", class:"img-rounded", alt: "Padel"),'http://rubyonrails.org/' %>
+            <% when 'pingpong'%>
+              <%= link_to image_tag("pingpong.jpg", class:"img-rounded", alt: "Ping Pong"),'http://rubyonrails.org/' %>
+            <% when 'tenis'%>
+              <%= link_to image_tag("raqueta_tenis.jpg", class:"img-rounded", class:"img-rounded", alt: "Tenis"),'http://rubyonrails.org/' %>
+          <% end %>
+      </div>
+      <div class="col-md-8">
+        <p><h2><%= field.name %></h2></p>
+        <p><%= field.other %></p>
+
+      </div>
+    </div>
 </p>
 <% end %>
