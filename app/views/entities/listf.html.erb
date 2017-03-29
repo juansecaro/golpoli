@@ -1,26 +1,25 @@
-<h1>Pistas disponibles en <%= @city.name %></h1>
+<p><h1>Pistas disponibles en <%= @city.name %></h1></p>
+<table class="table table-hover">
 <% @city.fields.each do |field| %>
-<p>
-    <div class="row">
-      <div class="col-md-4">
+    <tr>
+      <td>
           <% case field.kind %>
             <% when 'futbol'%>
-              <%= link_to image_tag(field.url1, class:"img-rounded", alt: "Futbol"),'http://rubyonrails.org/' %>
+              <%= link_to image_tag("futbol.jpg", class:"img-rounded", alt: "Futbol"),field_path(field)%>
             <% when 'futsal'%>
-              <%= link_to image_tag("polillerena.jpg", class:"img-rounded", alt: "Futbol sala"),'http://rubyonrails.org/' %>
+              <%= link_to image_tag("polillerena.jpg", class:"img-rounded", alt: "Futbol sala"),field_path(field) %>
             <% when 'padel'%>
-              <%= link_to image_tag("raqueta_padel.jpg", class:"img-rounded", alt: "Padel"),'http://rubyonrails.org/' %>
+              <%= link_to image_tag("padel.jpg", class:"img-rounded", alt: "Padel"),field_path(field) %>
             <% when 'pingpong'%>
-              <%= link_to image_tag("pingpong.jpg", class:"img-rounded", alt: "Ping Pong"),'http://rubyonrails.org/' %>
+              <%= link_to image_tag("pingpong.jpg", class:"img-rounded", alt: "Ping Pong"),field_path(field) %>
             <% when 'tenis'%>
-              <%= link_to image_tag("raqueta_tenis.jpg", class:"img-rounded", class:"img-rounded", alt: "Tenis"),'http://rubyonrails.org/' %>
+              <%= link_to image_tag("raqueta_tenis.jpg", class:"img-rounded", class:"img-rounded", alt: "Tenis"),field_path(field) %>
           <% end %>
-      </div>
-      <div class="col-md-8">
+      </td>
+      <td>
         <p><h2><%= field.name %></h2></p>
         <p><%= field.other %></p>
-
-      </div>
-    </div>
-</p>
+      </td>
+    </tr>
 <% end %>
+</table>

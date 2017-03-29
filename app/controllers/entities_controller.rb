@@ -14,7 +14,6 @@ class EntitiesController < ApplicationController
   end
   def listf
     @city = Entity.find_by(city: params[:name])
-    @list_fields = @city.fields
   end
   # GET /entities/new
   def new
