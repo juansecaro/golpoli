@@ -12,16 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
-//= require_tree .
-<%= stylesheet_link_tag "main" %>
-
-$('#datefield').datepicker({
-    format: "dd/mm/yyyy",
-    weekStart: 1,
-    startView: 1,
-    maxViewMode: 0,
-    language: "es",
-    autoclose: true,
-    todayHighlight: true
-});
+//= require_tree

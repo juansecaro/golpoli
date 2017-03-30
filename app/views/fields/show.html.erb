@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<input type="text" class="form-control" id="datefield">
 
 
 
+<p><input type="text" class="datepicker" onkeydown="return false" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off></p>
+
+<div id="dynamictable"></div>
  <%= @field.schedule.day_id %>
  <% @timetable.each do |k,v| %>
 
