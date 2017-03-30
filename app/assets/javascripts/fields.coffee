@@ -31,7 +31,7 @@ $(document).on 'turbolinks:load', ->
   table = $('#dynamictable').children()
   js_hash = loadHash()
   i for i in [0..47] by 2
-    table.append("<tr><td id='i'>#{js_hash[i]}</td><td id='i+1'>#{js_hash[i+1]}</td></tr>")
+  table.append("<tr><td id="+i+">+js_hash[i]+</td><td id='i+1'>+js_hash[i+1]+</td></tr>")
 
 
 loadHash = ->
