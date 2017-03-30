@@ -32,8 +32,8 @@
       <file leaf-file-name="fields.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fields.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="205">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -499,15 +499,15 @@
       <workItem from="1490265264991" duration="1578000" />
       <workItem from="1490268937885" duration="4275000" />
       <workItem from="1490880529547" duration="483000" />
-      <workItem from="1490883244492" duration="110000" />
+      <workItem from="1490883244492" duration="712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51350000" />
+    <option name="totallyTimeSpent" value="51952000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="21" width="1235" height="1003" extended-state="6" />
+    <frame x="45" y="21" width="1235" height="1003" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23643725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -875,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fields.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="205">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>
