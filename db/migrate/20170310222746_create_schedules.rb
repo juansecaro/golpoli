@@ -1,9 +1,7 @@
 class CreateSchedules < ActiveRecord::Migration[5.0]
   def change
     create_table :schedules do |t|
-      t.integer :day_id
       t.string :from_field
-      t.datetime :last_check
       t.references :field, foreign_key: true
       t.integer :h0
       t.integer :h1

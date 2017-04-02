@@ -71,6 +71,7 @@ class FieldsController < ApplicationController
     end
     #Load the time table from the db to an array
     def load_hours
+      @day = Field.schedules.find(params[:id])
       @hours = Array.new(48)
 
       @hours[0] =@field.schedule.h0

@@ -114,9 +114,7 @@ ActiveRecord::Schema.define(version: 20170319034110) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.integer  "day_id"
     t.string   "from_field"
-    t.datetime "last_check"
     t.integer  "field_id"
     t.integer  "h0"
     t.integer  "h1"

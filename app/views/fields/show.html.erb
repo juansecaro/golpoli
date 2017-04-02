@@ -5,12 +5,14 @@
 
 <p><input type="text" class="datepicker" onkeydown="return false" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off></p>
 
-<div id="dynamictable"></div>
+
 <%= @field.schedule.day_id %>
 
-<%= @hours.inspect %>
+<%= @timetable.inspect %>
 
-
+<div id="dynamictable">
+  <input type="button" onclick="createTable();" value="Create Table" />
+</div>
 <p>
   <strong>Name:</strong>
   <%= @field.name %>
