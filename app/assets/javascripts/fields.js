@@ -1,6 +1,9 @@
 
 $(document).on('turbolinks:load', function() {
   $('.datepicker').datepicker({
+    onSelect: function(date) {
+            alert(date);
+        },
     firstDay: 1,
     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
@@ -22,13 +25,15 @@ $(document).on('turbolinks:load', function() {
 });
 
 function createTable(){
-   
+
 $('#dynamictable').append('<table></table>');
 var table = $('#dynamictable').children();
 table.append("<tr><td colspan='3'>Nombre de Pista</td></tr>");
-for (i=0;i<48;i++){
-  table.append("<tr><td>a</td><td>c</td><td>b</td></tr>");
-}    
+var j;
+for (h=0;h<24;h++){
+  i=h*2;
+  table.append("<tr><td>"+h+":00 </td> <td id="+i+">c</td><td id="+(i+1)+">b</td></tr>");
+}
 
-  
+
 }
