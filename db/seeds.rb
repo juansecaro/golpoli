@@ -96,7 +96,6 @@ other: "Solo está de 11 a 1",
 entity_id: 1,
 )
 Schedule.create!(
-from_field: "futsal",
 field_id: 1,
 id:1,
 h0: nil,
@@ -150,7 +149,6 @@ h47: nil,
 )
 
 Schedule.create!(
-from_field: "futsal",
 field_id: 2,
 id: 2,
 h0: nil,
@@ -202,4 +200,3 @@ h45: nil,
 h46: nil,
 h47: nil,
 )
-

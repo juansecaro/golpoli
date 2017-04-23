@@ -1,0 +1,123 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>H0</th>
+      <th>H1</th>
+      <th>H2</th>
+      <th>H3</th>
+      <th>H4</th>
+      <th>H5</th>
+      <th>H6</th>
+      <th>H7</th>
+      <th>H8</th>
+      <th>H9</th>
+      <th>H10</th>
+      <th>H11</th>
+      <th>H12</th>
+      <th>H13</th>
+      <th>H14</th>
+      <th>H15</th>
+      <th>H16</th>
+      <th>H17</th>
+      <th>H18</th>
+      <th>H19</th>
+      <th>H20</th>
+      <th>H21</th>
+      <th>H22</th>
+      <th>H23</th>
+      <th>H24</th>
+      <th>H25</th>
+      <th>H26</th>
+      <th>H27</th>
+      <th>H28</th>
+      <th>H29</th>
+      <th>H30</th>
+      <th>H31</th>
+      <th>H32</th>
+      <th>H33</th>
+      <th>H34</th>
+      <th>H35</th>
+      <th>H36</th>
+      <th>H37</th>
+      <th>H38</th>
+      <th>H39</th>
+      <th>H40</th>
+      <th>H41</th>
+      <th>H42</th>
+      <th>H43</th>
+      <th>H44</th>
+      <th>H45</th>
+      <th>H46</th>
+      <th>H47</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.field %></td>
+        <td><%= schedule.h0 %></td>
+        <td><%= schedule.h1 %></td>
+        <td><%= schedule.h2 %></td>
+        <td><%= schedule.h3 %></td>
+        <td><%= schedule.h4 %></td>
+        <td><%= schedule.h5 %></td>
+        <td><%= schedule.h6 %></td>
+        <td><%= schedule.h7 %></td>
+        <td><%= schedule.h8 %></td>
+        <td><%= schedule.h9 %></td>
+        <td><%= schedule.h10 %></td>
+        <td><%= schedule.h11 %></td>
+        <td><%= schedule.h12 %></td>
+        <td><%= schedule.h13 %></td>
+        <td><%= schedule.h14 %></td>
+        <td><%= schedule.h15 %></td>
+        <td><%= schedule.h16 %></td>
+        <td><%= schedule.h17 %></td>
+        <td><%= schedule.h18 %></td>
+        <td><%= schedule.h19 %></td>
+        <td><%= schedule.h20 %></td>
+        <td><%= schedule.h21 %></td>
+        <td><%= schedule.h22 %></td>
+        <td><%= schedule.h23 %></td>
+        <td><%= schedule.h24 %></td>
+        <td><%= schedule.h25 %></td>
+        <td><%= schedule.h26 %></td>
+        <td><%= schedule.h27 %></td>
+        <td><%= schedule.h28 %></td>
+        <td><%= schedule.h29 %></td>
+        <td><%= schedule.h30 %></td>
+        <td><%= schedule.h31 %></td>
+        <td><%= schedule.h32 %></td>
+        <td><%= schedule.h33 %></td>
+        <td><%= schedule.h34 %></td>
+        <td><%= schedule.h35 %></td>
+        <td><%= schedule.h36 %></td>
+        <td><%= schedule.h37 %></td>
+        <td><%= schedule.h38 %></td>
+        <td><%= schedule.h39 %></td>
+        <td><%= schedule.h40 %></td>
+        <td><%= schedule.h41 %></td>
+        <td><%= schedule.h42 %></td>
+        <td><%= schedule.h43 %></td>
+        <td><%= schedule.h44 %></td>
+        <td><%= schedule.h45 %></td>
+        <td><%= schedule.h46 %></td>
+        <td><%= schedule.h47 %></td>
+        <td><%= link_to 'Show', schedule %></td>
+        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
+        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Schedule', new_schedule_path %>

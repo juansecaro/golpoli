@@ -1,9 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  day_id: 1
-  from_field: MyString
-  last_check: 2017-03-10 23:27:46
   field: one
   h0: 1
   h1: 1
@@ -55,9 +52,6 @@ one:
   h47: 1
 
 two:
-  day_id: 1
-  from_field: MyString
-  last_check: 2017-03-10 23:27:46
   field: two
   h0: 1
   h1: 1

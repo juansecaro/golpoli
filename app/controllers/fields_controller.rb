@@ -84,8 +84,8 @@ class FieldsController < ApplicationController
       @hours[7] =@day.h7
       @hours[8] =@day.h8
       @hours[9] =@day.h9
-      @hours[10]=@day.h10      
-      @hours[11]=@day.h11     
+      @hours[10]=@day.h10
+      @hours[11]=@day.h11
       @hours[12]=@day.h12
       @hours[13]=@day.h13
       @hours[14]=@day.h14
@@ -139,8 +139,8 @@ class FieldsController < ApplicationController
       @field.schedule.h7 =  hours[7]
       @field.schedule.h8 =  hours[8]
       @field.schedule.h9 =  hours[9]
-      @field.schedule.h10 = hours[10]      
-      @field.schedule.h11 = hours[11]     
+      @field.schedule.h10 = hours[10]
+      @field.schedule.h11 = hours[11]
       @field.schedule.h12 = hours[12]
       @field.schedule.h13 = hours[13]
       @field.schedule.h14 = hours[14]

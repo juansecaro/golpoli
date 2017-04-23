@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319034110) do
+ActiveRecord::Schema.define(version: 20170423011356) do
 
   create_table "advertisers", force: :cascade do |t|
     t.string   "name"
@@ -78,43 +78,7 @@ ActiveRecord::Schema.define(version: 20170319034110) do
     t.index ["entity_id"], name: "index_fields_on_entity_id"
   end
 
-  create_table "schedule_configs", force: :cascade do |t|
-    t.time     "open0"
-    t.time     "open1"
-    t.time     "open2"
-    t.time     "open3"
-    t.time     "open4"
-    t.time     "open5"
-    t.time     "open6"
-    t.time     "close0"
-    t.time     "close1"
-    t.time     "close2"
-    t.time     "close3"
-    t.time     "close4"
-    t.time     "close5"
-    t.time     "close6"
-    t.time     "ospecial0"
-    t.time     "ospecial1"
-    t.time     "ospecial2"
-    t.time     "ospecial3"
-    t.time     "ospecial4"
-    t.time     "ospecial5"
-    t.time     "ospecial6"
-    t.time     "especial0"
-    t.time     "especial1"
-    t.time     "especial2"
-    t.time     "especial3"
-    t.time     "especial4"
-    t.time     "especial5"
-    t.time     "especial6"
-    t.integer  "field_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["field_id"], name: "index_schedule_configs_on_field_id"
-  end
-
   create_table "schedules", force: :cascade do |t|
-    t.string   "from_field"
     t.integer  "field_id"
     t.integer  "h0"
     t.integer  "h1"
