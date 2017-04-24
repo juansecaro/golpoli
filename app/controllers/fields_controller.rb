@@ -66,7 +66,8 @@ class FieldsController < ApplicationController
   end
 
   def get_schedule
-    @schedule = Schedule.where("monthday = ? AND field_id = ?", params[:mes], params[:id])
+    @schedule = Schedule.where("monthday = ? and field_id = ?", params[:day], params[:field_id])
+    render json: @schedule[0]
   end
 
   private

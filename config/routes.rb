@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :schedules
   root 'static_pages#home'
 
   get 'static_pages/home'
@@ -12,14 +11,20 @@ Rails.application.routes.draw do
   get 'static_pages/pricing'
 
   get 'static_pages/testimonials'
+
   get ':name', to: 'entities#listf'
-  #get ':name/:field/', to: 'fields#get_schedule'
+
+  # Aquí es donde objento el JSON de cada horario
+  #get '/horarios', to: 'fields#get_schedule'
 
   devise_for :users
 
-  resources :advertisers
-  resources :fields
-  resources :entities
+  resources :entities do
   resources :contacts
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :advertisers
+  resources :fields do
+    resources :schedule
+    end
+  end
+
 end

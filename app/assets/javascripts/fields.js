@@ -3,9 +3,10 @@ $(document).on('turbolinks:load', function() {
   $('.datepicker').datepicker({
     onSelect: function(date) {
       var mday = date.substring(0, 2);
-      var field_id = document.getElementById("field_id").value;
-      $.post('/url',{month: mday, id: field_id},function(data){});
-          alert(field_id);
+      //Field id saved in hidden value
+      var id = document.getElementById("field_id").value;
+      $.get('/horarios', {day: mday, field_id: id}, function(data){});
+          alert(id);
 
             //alert(Number(mday));
         },
