@@ -5,11 +5,19 @@ $(document).on('turbolinks:load', function() {
       var mday = date.substring(0, 2);
       //Field id saved in hidden value
       var id = document.getElementById("field_id").value;
-      $.get('/horarios', {day: mday, field_id: id}, function(data){});
-          alert(id);
+      $.getJSON('/horarios', {day: mday, field_id: id})
+      .done(function( json ) {
+          console.log( "JSON Data: " + json.monthday );
+        })
+      .fail(function( jqxhr, textStatus, error ) {
+          var err = textStatus + ", " + error;
+          console.log( "Request Failed: " + err );
+        });
 
-            //alert(Number(mday));
-        },
+
+
+
+    },
     firstDay: 1,
     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
