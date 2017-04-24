@@ -20,10 +20,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :entities do
-  resources :contacts
-  resources :advertisers
-  resources :fields do
-    resources :schedule
+    resources :contacts
+    resources :advertisers
+    resources :fields do
+      resources :schedule
     end
   end
 
