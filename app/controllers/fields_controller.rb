@@ -10,6 +10,7 @@ class FieldsController < ApplicationController
   # GET /fields/1
   # GET /fields/1.json
   def show
+    #@schedule = Schedules.find(params)
     @timetable = load_hours
   end
 
@@ -64,14 +65,19 @@ class FieldsController < ApplicationController
     end
   end
 
+  def get_schedule
+    @schedule = Schedule.where("monthday = ? AND field_id = ?", params[:mes], params[:id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
+
     def set_field
       @field = Field.find(params[:id])
     end
     #Load the time table from the db to an array
     def load_hours
-      @day = Schedule.find(params[:id])
+      @day = Schedule.first
       @hours = Array.new(48)
 
       @hours[0] =@day.h0
@@ -128,6 +134,7 @@ class FieldsController < ApplicationController
 
 #Still under construction. Not sure how to proceed
     def save_hours
+      @day = Schedule.find(params[:monthday])
 
       @field.schedule.h0 =  hours[0]
       @field.schedule.h1 =  hours[1]

@@ -2,6 +2,7 @@
 
 one:
   field: one
+  monthday: 1
   h0: 1
   h1: 1
   h2: 1
@@ -53,6 +54,7 @@ one:
 
 two:
   field: two
+  monthday: 1
   h0: 1
   h1: 1
   h2: 1

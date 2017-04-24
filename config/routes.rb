@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/testimonials'
   get ':name', to: 'entities#listf'
+  #get ':name/:field/', to: 'fields#get_schedule'
 
   devise_for :users
 

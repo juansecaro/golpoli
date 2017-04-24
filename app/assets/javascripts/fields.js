@@ -2,7 +2,12 @@
 $(document).on('turbolinks:load', function() {
   $('.datepicker').datepicker({
     onSelect: function(date) {
-            alert(date);
+      var mday = date.substring(0, 2);
+      var field_id = document.getElementById("field_id").value;
+      $.post('/url',{month: mday, id: field_id},function(data){});
+          alert(field_id);
+
+            //alert(Number(mday));
         },
     firstDay: 1,
     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
@@ -23,7 +28,7 @@ $(document).on('turbolinks:load', function() {
     minDate: 0
   });
 });
-
+// Creation of void table with times and IDs
 function createTable(){
 
 $('#dynamictable').append('<table></table>');
@@ -33,7 +38,5 @@ var j;
 for (h=0;h<24;h++){
   i=h*2;
   table.append("<tr><td>"+h+":00 </td> <td id="+i+">c</td><td id="+(i+1)+">b</td></tr>");
-}
-
-
+  }
 }

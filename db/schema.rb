@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170423011356) do
+ActiveRecord::Schema.define(version: 20170423012402) do
 
   create_table "advertisers", force: :cascade do |t|
     t.string   "name"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170423011356) do
 
   create_table "schedules", force: :cascade do |t|
     t.integer  "field_id"
+    t.integer  "monthday"
     t.integer  "h0"
     t.integer  "h1"
     t.integer  "h2"

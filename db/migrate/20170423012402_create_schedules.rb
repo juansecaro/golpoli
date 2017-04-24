@@ -2,6 +2,7 @@ class CreateSchedules < ActiveRecord::Migration[5.0]
   def change
     create_table :schedules do |t|
       t.references :field, foreign_key: true
+      t.integer :monthday
       t.integer :h0
       t.integer :h1
       t.integer :h2

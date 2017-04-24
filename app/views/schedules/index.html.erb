@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Field</th>
+      <th>Monthday</th>
       <th>H0</th>
       <th>H1</th>
       <th>H2</th>
@@ -62,6 +63,7 @@
     <% @schedules.each do |schedule| %>
       <tr>
         <td><%= schedule.field %></td>
+        <td><%= schedule.monthday %></td>
         <td><%= schedule.h0 %></td>
         <td><%= schedule.h1 %></td>
         <td><%= schedule.h2 %></td>
