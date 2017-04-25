@@ -5,14 +5,19 @@ $(document).on('turbolinks:load', function() {
       var mday = date.substring(0, 2);
       //Field id saved in hidden value
       var id = document.getElementById("field_id").value;
-      $.getJSON('/horarios', {day: mday, field_id: id})
-      .done(function( json ) {
-          console.log( "JSON Data: " + json.monthday );
-        })
-      .fail(function( jqxhr, textStatus, error ) {
-          var err = textStatus + ", " + error;
-          console.log( "Request Failed: " + err );
-        });
+
+      $.ajax({
+          url: '/horarios',
+          type: 'GET',
+          dataType: 'json',
+          cache: false,
+          data: { day: mday, field_id: id },
+          success: function(data) {
+                // data is a json object.
+                console.log(data);
+            }
+          
+      });
 
 
 
