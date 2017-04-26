@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e953293-c97b-4f1b-acfa-4c33d423ecf7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/poligol.iml" afterPath="$PROJECT_DIR$/.idea/poligol.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/fields.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/fields.js" />
     </list>
@@ -44,8 +43,8 @@
       <file leaf-file-name="fields.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fields.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="34">
+              <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -514,12 +513,12 @@
       <workItem from="1490880529547" duration="483000" />
       <workItem from="1490883244492" duration="712000" />
       <workItem from="1490988762023" duration="902000" />
-      <workItem from="1493112037103" duration="1252000" />
+      <workItem from="1493112037103" duration="2573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54106000" />
+    <option name="totallyTimeSpent" value="55427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1325" y="21" width="1235" height="1003" extended-state="6" />
@@ -874,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/fields.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="34">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
           <folding />
         </state>
       </provider>

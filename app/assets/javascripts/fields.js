@@ -15,12 +15,19 @@ $(document).on('turbolinks:load', function() {
           success: function(data) {
                 // data is a json object.
                 console.log(data);
-            }
-          
+                // Start creating table with JSON's information
+
+                createTable(data);
+            },
+          error: function() {
+              console.log('error');
+              alert('Error al cargar los horarios. Por favor, inténtelo de nuevo más tarde.');
+          },
+          complete: function(xhr) {
+              console.log('complete json loading');
+              console.log(xhr.getAllResponseHeaders());
+          }
       });
-
-
-
 
     },
     firstDay: 1,
@@ -43,14 +50,22 @@ $(document).on('turbolinks:load', function() {
   });
 });
 // Creation of void table with times and IDs
-function createTable(){
+function createTable(json){
 
 $('#dynamictable').append('<table></table>');
 var table = $('#dynamictable').children();
 table.append("<tr><td colspan='3'>Nombre de Pista</td></tr>");
-var j;
+table.append("<tr><td>Hora</td><td>30 min</td><td>30 min</td></tr>");
+var root = "h";
+var val1,val2;
 for (h=0;h<24;h++){
   i=h*2;
-  table.append("<tr><td>"+h+":00 </td> <td id="+i+">c</td><td id="+(i+1)+">b</td></tr>");
+  val1 = eval("json."+(root+i));//concat strings and values to access h vars
+  val2 = eval("json."+(root+(i+1)));
+
+  table.append("<tr><td>"+h+":00 </td> <td id="+i+">"+val1+"</td><td id="+(i+1)+">"+val2+"</td></tr>");
+
+
+
   }
 }
