@@ -63,9 +63,15 @@ for (h=0;h<24;h++){
   val1 = eval("json."+(root+i));//concat strings and values to access h vars
   val2 = eval("json."+(root+(i+1)));
 
-  table.append("<tr><td>"+h+":00 </td> <td id="+i+">"+val1+"</td><td id="+(i+1)+">"+val2+"</td></tr>");
+  table.append("<tr><td>"+formattedH(h)+":00 </td> <td id="+i+">"+val1+"</td><td id="+(i+1)+">"+val2+"</td></tr>");
 
 
 
   }
+}
+// Just put 0 back to the number if < 9
+function formattedH (h)
+{
+  if (h<=9) {return ('0'+h)}
+  else return h;
 }
