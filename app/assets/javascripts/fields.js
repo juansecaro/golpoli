@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
           data: { day: mday, field_id: id },
           success: function(data) {
                 // data is a json object.
-                console.log(data);
+                //console.log(data);
                 // Start creating table with JSON's information
 
                 createTable(data);
@@ -49,8 +49,19 @@ $(document).on('turbolinks:load', function() {
     minDate: 0
   });
 });
+
+
+
+
+
+
+
 // Creation of void table with times and IDs
 function createTable(json){
+
+//Erasing previous data in case it had
+    eraseTable();
+
 
 $('#dynamictable').append('<table></table>');
 var table = $('#dynamictable').children();
@@ -62,16 +73,21 @@ for (h=0;h<24;h++){
   i=h*2;
   val1 = eval("json."+(root+i));//concat strings and values to access h vars
   val2 = eval("json."+(root+(i+1)));
-
-  table.append("<tr><td>"+formattedH(h)+":00 </td> <td id="+i+">"+val1+"</td><td id="+(i+1)+">"+val2+"</td></tr>");
-
-
-
+  if (val1 != null &&  val2 != null){
+    table.append("<tr><td>"+formattedH(h)+":00 </td> <td id="+i+">"+val1+"</td><td id="+(i+1)+">"+val2+"</td></tr>");
+    }
   }
+
 }
 // Just put 0 back to the number if < 9
 function formattedH (h)
 {
   if (h<=9) {return ('0'+h)}
   else return h;
+}
+function eraseTable(){
+    var el = document.getElementById('dynamictable');
+    while( el.hasChildNodes() ){
+        el.removeChild(el.lastChild);
+    }
 }
