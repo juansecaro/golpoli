@@ -48,12 +48,8 @@ $(document).on('turbolinks:load', function() {
     maxDate: "+1w",
     minDate: 0
   });
+
 });
-
-
-
-
-
 
 
 // Creation of void table with times and IDs
@@ -61,7 +57,6 @@ function createTable(json){
 
 //Erasing previous data in case it had
     eraseTable();
-
 
 $('#dynamictable').append('<table></table>');
 var table = $('#dynamictable').children();
@@ -91,3 +86,11 @@ function eraseTable(){
         el.removeChild(el.lastChild);
     }
 }
+// Getting ID of selected cell
+$(document).on('turbolinks:load', function(){
+
+    $("#dynamictable tr td").click(function(event) {
+        console.log("Ha entrado 2");
+        alert($(this).attr('id'));
+    });
+});
