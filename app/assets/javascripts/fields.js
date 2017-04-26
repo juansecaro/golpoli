@@ -86,11 +86,11 @@ function eraseTable(){
         el.removeChild(el.lastChild);
     }
 }
-// Getting ID of selected cell
-$(document).on('turbolinks:load', function(){
 
-    $("#dynamictable tr td").click(function(event) {
-        console.log("Ha entrado 2");
-        alert($(this).attr('id'));
-    });
+$(document).on( 'turbolinks:load', function(){
+    console.log("Ha entrado 2");
+     $("#dynamictable").on('click','td', function() {
+    
+         alert($(this).attr('id'));
+     });
 });
