@@ -3,3 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 table{background:#CCC;border:1px solid #000;}
 table td{padding:15px;border:1px solid #DDD;}
+
+// Table code colors
+$closed: #CCC; // Out of time
+$free: #8CFF83; // Free to use
+$occupied: #542604; //Reservation confirmed
+$unconfirmed: #FF740D; //Reservation unconfirmed
+$unavailable: #4C9DFF; // Blocked, Used by other activities or maintenance
+$selected: #FF0000; // Current selection
+
+
