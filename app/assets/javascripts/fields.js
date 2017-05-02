@@ -96,7 +96,6 @@ for (h=0;h<24;h++){
   console.log(miArray);
 }
 
-
 // Removing old tables for different days selections
 function eraseTable(){
     var el = document.getElementById('dynamictable');
@@ -138,7 +137,6 @@ $(document).on( 'turbolinks:load', function(){
 //Reconstruct JSON with changes to be validated
 function JSONBack()
 {
-
     $.ajax({
         url: '/horarios',
         type: 'GET',
@@ -146,18 +144,25 @@ function JSONBack()
         cache: false,
         data: { day: mday, field_id: id },
         success: function(data) {
-            if (compareObjects(data,globalJSON)){
-
-
-
-
-            // post con nuevo jSON
-
-
-
-
-
-
+            if (!compareObjects(data,globalJSON)){// if values had been modified for the same pairs
+              arrayToJSON(); // Now global JSON have the changes
+              ////////////////////////// Second and valid json to the server
+                $.ajax({
+                    url: '/horarios',
+                    type: 'POST',
+                    dataType: 'json',
+                    cache: false,
+                    data: globalJSON,
+                    success: function(response) {
+                      console.log(response.status);
+                      },
+                    error: function() {
+                        console.log('error');
+                        console.log('complete json loading');
+                        console.log(xhr.getAllResponseHeaders());
+                    }
+                });
+                //////////////////////////
                 console.log("Iguales");
                 alert("All right"); }
             else {
@@ -177,15 +182,57 @@ function JSONBack()
     });
 
 }
+//Save modifications to be sent as json to the server
 function arrayToJSON(){
 
-
-
-
-
-
-
-
+globalJSON.h0 = miArray[0];
+globalJSON.h1 = miArray[1];
+globalJSON.h2 = miArray[2];
+globalJSON.h3 = miArray[3];
+globalJSON.h4 = miArray[4];
+globalJSON.h5 = miArray[5];
+globalJSON.h6 = miArray[6];
+globalJSON.h7 = miArray[7];
+globalJSON.h8 = miArray[8];
+globalJSON.h9 = miArray[9];
+globalJSON.h10 = miArray[10];
+globalJSON.h11 = miArray[11];
+globalJSON.h12 = miArray[12];
+globalJSON.h13 = miArray[13];
+globalJSON.h14 = miArray[14];
+globalJSON.h15 = miArray[15];
+globalJSON.h16 = miArray[16];
+globalJSON.h17 = miArray[17];
+globalJSON.h18 = miArray[18];
+globalJSON.h19 = miArray[19];
+globalJSON.h20 = miArray[20];
+globalJSON.h21 = miArray[21];
+globalJSON.h22 = miArray[22];
+globalJSON.h23 = miArray[23];
+globalJSON.h24 = miArray[24];
+globalJSON.h25 = miArray[25];
+globalJSON.h26 = miArray[26];
+globalJSON.h27 = miArray[27];
+globalJSON.h28 = miArray[28];
+globalJSON.h29 = miArray[29];
+globalJSON.h30 = miArray[30];
+globalJSON.h31 = miArray[31];
+globalJSON.h32 = miArray[32];
+globalJSON.h33 = miArray[33];
+globalJSON.h34 = miArray[34];
+globalJSON.h35 = miArray[35];
+globalJSON.h36 = miArray[36];
+globalJSON.h37 = miArray[37];
+globalJSON.h38 = miArray[38];
+globalJSON.h39 = miArray[39];
+globalJSON.h40 = miArray[40];
+globalJSON.h41 = miArray[41];
+globalJSON.h42 = miArray[42];
+globalJSON.h43 = miArray[43];
+globalJSON.h44 = miArray[44];
+globalJSON.h45 = miArray[45];
+globalJSON.h46 = miArray[46];
+globalJSON.h47 = miArray[47];
 
 }
 // Just put 0 back to the number if < 9
