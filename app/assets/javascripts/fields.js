@@ -1,14 +1,14 @@
 var globalJSON;
 var miArray = new Array(48);
-
-
+var mday;
+var id;
 
 $(document).on('turbolinks:load', function() {
   $('.datepicker').datepicker({
     onSelect: function(date) {
-      var mday = date.substring(0, 2);
+      mday = date.substring(0, 2);
       //Field id saved in hidden value
-      var id = document.getElementById("field_id").value;
+      id = document.getElementById("field_id").value;
 
       $.ajax({
           url: '/horarios',
@@ -117,7 +117,7 @@ function eraseReservations(){
       }
     }
 }
-//Selection specifics cells
+//Selection-Deselection specifics cells
 $(document).on( 'turbolinks:load', function(){
      $("#dynamictable").on('click','td', function() {
          //alert($(this).attr('id'));
@@ -126,7 +126,6 @@ $(document).on( 'turbolinks:load', function(){
             miArray[p] = 9;
             $('#'+ p).css({"background-color": "red"});
             $('#booking').append("<p id="+'m'+p+">"+hourById(p)+"<p>");
-
           }
           else if (miArray[p] == 9) {
             miArray[p]=0;
@@ -136,15 +135,70 @@ $(document).on( 'turbolinks:load', function(){
           }
      });
 });
+//Reconstruct JSON with changes to be validated
+function JSONBack()
+{
+
+    $.ajax({
+        url: '/horarios',
+        type: 'GET',
+        dataType: 'json',
+        cache: false,
+        data: { day: mday, field_id: id },
+        success: function(data) {
+            if (compareObjects(data,globalJSON)){
+
+
+
+
+            // post con nuevo jSON
+
+
+
+
+
+
+                console.log("Iguales");
+                alert("All right"); }
+            else {
+                alert("Otro usuario ha hecho reservas en esta pista mientas decidias. Se actualizarán los horarios");
+                location.reload(forceGet = true); //Page update from the server
+                console.log("Diferentes");
+              }
+        },
+        error: function() {
+            console.log('error');
+            alert('Error al cargar los horarios. Por favor, inténtelo de nuevo más tarde.');
+        },
+        complete: function(xhr) {
+            console.log('complete json loading');
+            console.log(xhr.getAllResponseHeaders());
+        }
+    });
+
+}
+function arrayToJSON(){
+
+
+
+
+
+
+
+
+
+}
 // Just put 0 back to the number if < 9
 function formattedH (h)
 {
   if (h<=9) {return ('0'+h)}
   else return h;
 }
+function compareObjects(obj1, obj2) {
+    return JSON.stringify(obj1) === JSON.stringify(obj2);
+}
 //Given an ID, shows reservation selected
 function hourById(id){
-
   var h = id/2;
   var hf;
   var exp;

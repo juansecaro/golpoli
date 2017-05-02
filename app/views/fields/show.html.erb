@@ -1,64 +1,18 @@
 <p id="notice"><%= notice %></p>
 <p><input type="text" class="datepicker" onkeydown="return false" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off></p>
 
-<%= @timetable.inspect %>
+<% @timetable.inspect %>
 
-<div id="dynamictable"></div>
-<div id="booking"></div>
+<div id="dynamictable" class="col-md-4"></div>
+<div id="booking" class="col-md-8"></div>
 
 <div>
  <input type="hidden" id='field_id' value='<%= @field.id %>'>
  <p id='date'> </p>
 </div>
-<p>
-  <strong>Name:</strong>
-  <%= @field.name %>
-</p>
 
-<p>
-  <strong>Normal price:</strong>
-  <%= @field.normal_price %>
-</p>
+<input type="button" class="btn btn-info" onclick="JSONBack();" value="¡Reserva!" />
 
-<p>
-  <strong>Special price:</strong>
-  <%= @field.special_price %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @field.active %>
-</p>
-
-<p>
-  <strong>Other:</strong>
-  <%= @field.other %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @field.kind %>
-</p>
-
-<p>
-  <strong>Url1:</strong>
-  <%= @field.url1 %>
-</p>
-
-<p>
-  <strong>Url2:</strong>
-  <%= @field.url2 %>
-</p>
-
-<p>
-  <strong>Url3:</strong>
-  <%= @field.url3 %>
-</p>
-
-<p>
-  <strong>Entity:</strong>
-  <%= @field.entity %>
-</p>
 
 <%= link_to 'Edit', edit_field_path(@field) %> |
 <%= link_to 'Back', fields_path %>

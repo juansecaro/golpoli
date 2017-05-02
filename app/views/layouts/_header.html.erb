@@ -3,8 +3,12 @@
     <%= link_to "POLIGOL", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "Reservas",   root_path %></li>
         <li><%= link_to "Tour",   static_pages_tour_path %></li>
+        <li><%= link_to "Testimonios",   static_pages_testimonials_path %></li>
+        <li><%= link_to "Precio",   static_pages_pricing_path %></li>
+        <li><%= link_to "Contacto",   static_pages_contact_path %></li>
+
         <% if  user_signed_in? %>
             <li><%= link_to "Users", users_path %></li>
             <li class="dropdown">
