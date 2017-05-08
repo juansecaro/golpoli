@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
 
 get '/horarios', to: 'fields#get_schedule'
+post '/horarios', to: 'fields#set_schedule'
 get ':name', to: 'entities#listf'
   # Aquí es donde objento el JSON de cada horario
-
 
 end
