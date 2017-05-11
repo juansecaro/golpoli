@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'static_pages#home'
 
   get 'static_pages/home'
@@ -9,13 +10,12 @@ Rails.application.routes.draw do
   get 'static_pages/testimonials'
 
 
-  devise_for :users
-
+  resources :charges
   resources :entities
   resources :contacts
   resources :advertisers
   resources :fields do
-    resources :schedule
+    resources :schedules
   end
 
 

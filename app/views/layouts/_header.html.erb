@@ -9,23 +9,15 @@
         <li><%= link_to "Precio",   static_pages_pricing_path %></li>
         <li><%= link_to "Contacto",   static_pages_contact_path %></li>
 
-        <% if  user_signed_in? %>
-            <li><%= link_to "Users", users_path %></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Log out", logout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
-        <% else %>
-            <li><%= link_to "Log in", new_user_session_path %></li>
-        <% end %>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+              <li><%= link_to "Account", edit_user_registration_path %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+          <% end %>
+        </ul>
       </ul>
     </nav>
   </div>

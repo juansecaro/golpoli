@@ -11,8 +11,32 @@
  <p id='date'> </p>
 </div>
 
-<input type="button" class="btn btn-info" onclick="JSONBack();" value="¡Reserva!" />
 
+<form>
+  <label>
+    <span>Name</span>
+    <input name="cardholder-name" class="field" placeholder="Jane Doe" />
+  </label>
+  <label>
+    <span>Phone</span>
+    <input class="field" placeholder="(123) 456-7890" type="tel" />
+  </label>
+  <label>
+    <span>ZIP code</span>
+    <input name="address-zip" class="field" placeholder="94110" />
+  </label>
+  <label>
+    <span>Card</span>
+    <div id="card-element" class="field"></div>
+  </label>
+  <button type="submit">Pay $25</button>
+  <div class="outcome">
+    <div class="error"></div>
+    <div class="success">
+      Success! Your Stripe token is <span class="token"></span>
+    </div>
+  </div>
+</form>
 
 <%= link_to 'Edit', edit_field_path(@field) %> |
 <%= link_to 'Back', fields_path %>
