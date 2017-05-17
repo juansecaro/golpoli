@@ -264,34 +264,3 @@ function hourById(id){
     return exp;
 
 }
-// Stripe
-$(document).ready(function(){
-
-
-  stripe_public_key = $("meta[name='stripe_public_key']").attr("content");
-  var stripe = Stripe(stripe_public_key);
-  var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
-  var elements = stripe.elements({
-      
-  });
-
-  var card = elements.create('card', {
-      hidePostalCode: true,
-      style: {
-          base: {
-              iconColor: '#F99A52',
-              color: '#32315E',
-              lineHeight: '48px',
-              fontWeight: 400,
-              fontFamily: '"Open Sans", "Helvetica Neue", "Helvetica", sans-serif',
-              fontSize: '15px',
-
-              '::placeholder': {
-                  color: '#CFD7DF',
-              }
-          },
-      }
-  });
-  card.mount('#card-element');
-
-});
