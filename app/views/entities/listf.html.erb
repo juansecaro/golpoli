@@ -1,24 +1,24 @@
 <p><h1>Pistas disponibles en <%= @city.name %></h1></p>
 <table class="table table-hover">
-<% @city.fields.each do |field| %>
+<% @city.pitches.each do |pitch| %>
     <tr>
       <td>
-          <% case field.kind %>
+          <% case pitch.kind %>
             <% when 'futbol'%>
-              <%= link_to image_tag("futbol.jpg", class:"img-rounded", alt: "Futbol"),field_path(field)%>
+              <%= link_to image_tag("futbol.jpg", class:"img-rounded", alt: "Futbol"),pitch_path(pitch)%>
             <% when 'futsal'%>
-              <%= link_to image_tag("polillerena.jpg", class:"img-rounded", alt: "Futbol sala"),field_path(field) %>
+              <%= link_to image_tag("polillerena.jpg", class:"img-rounded", alt: "Futbol sala"),pitch_path(pitch) %>
             <% when 'padel'%>
-              <%= link_to image_tag("padel.jpg", class:"img-rounded", alt: "Padel"),field_path(field) %>
+              <%= link_to image_tag("padel.jpg", class:"img-rounded", alt: "Padel"),pitch_path(pitch) %>
             <% when 'pingpong'%>
-              <%= link_to image_tag("pingpong.jpg", class:"img-rounded", alt: "Ping Pong"),field_path(field) %>
+              <%= link_to image_tag("pingpong.jpg", class:"img-rounded", alt: "Ping Pong"),pitch_path(pitch) %>
             <% when 'tenis'%>
-              <%= link_to image_tag("raqueta_tenis.jpg", class:"img-rounded", class:"img-rounded", alt: "Tenis"),field_path(field) %>
+              <%= link_to image_tag("raqueta_tenis.jpg", class:"img-rounded", class:"img-rounded", alt: "Tenis"),pitch_path(pitch) %>
           <% end %>
       </td>
       <td>
-        <p><h2><%= field.name %></h2></p>
-        <p><%= field.other %></p>
+        <p><h2><%= pitch.name %></h2></p>
+        <p><%= pitch.other %></p>
       </td>
     </tr>
 <% end %>

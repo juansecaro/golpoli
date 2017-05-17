@@ -46,7 +46,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bootstrap-sass (3.3.7)
+    bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
@@ -186,7 +186,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 2.1, >= 2.1.1)
-  bootstrap-sass (= 3.3.7)
+  bootstrap-sass (= 3.3.6)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
@@ -208,4 +208,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.12.5
+   1.14.6

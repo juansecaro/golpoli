@@ -1,6 +1,6 @@
-class CreateFields < ActiveRecord::Migration[5.0]
+class CreatePitches < ActiveRecord::Migration[5.0]
   def change
-    create_table :fields do |t|
+    create_table :pitches do |t|
       t.string :name
       t.decimal :normal_price
       t.decimal :special_price

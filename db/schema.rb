@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508142947) do
+ActiveRecord::Schema.define(version: 20170511201940) do
 
   create_table "advertisers", force: :cascade do |t|
     t.string   "name"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20170508142947) do
     t.index ["contact_id"], name: "index_entities_on_contact_id"
   end
 
-  create_table "fields", force: :cascade do |t|
+  create_table "pitches", force: :cascade do |t|
     t.string   "name"
     t.decimal  "normal_price"
     t.decimal  "special_price"
@@ -75,11 +75,11 @@ ActiveRecord::Schema.define(version: 20170508142947) do
     t.integer  "entity_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["entity_id"], name: "index_fields_on_entity_id"
+    t.index ["entity_id"], name: "index_pitches_on_entity_id"
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.integer  "field_id"
+    t.integer  "pitch_id"
     t.integer  "monthday"
     t.integer  "h0"
     t.integer  "h1"
@@ -131,7 +131,7 @@ ActiveRecord::Schema.define(version: 20170508142947) do
     t.integer  "h47"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["field_id"], name: "index_schedules_on_field_id"
+    t.index ["pitch_id"], name: "index_schedules_on_pitch_id"
   end
 
   create_table "users", force: :cascade do |t|

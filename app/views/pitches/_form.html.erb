@@ -1,10 +1,10 @@
-<%= form_for(field) do |f| %>
-  <% if field.errors.any? %>
+<%= form_for(pitch) do |f| %>
+  <% if pitch.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(field.errors.count, "error") %> prohibited this field from being saved:</h2>
+      <h2><%= pluralize(pitch.errors.count, "error") %> prohibited this pitch from being saved:</h2>
 
       <ul>
-      <% field.errors.full_messages.each do |message| %>
+      <% pitch.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -37,8 +37,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :type %>
-    <%= f.text_field :type %>
+    <%= f.label :kind %>
+    <%= f.text_field :kind %>
   </div>
 
   <div class="field">

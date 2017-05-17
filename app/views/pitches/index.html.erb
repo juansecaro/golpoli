@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pitches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Normal price</th>
+      <th>Special price</th>
+      <th>Active</th>
+      <th>Other</th>
+      <th>Kind</th>
+      <th>Url1</th>
+      <th>Url2</th>
+      <th>Url3</th>
+      <th>Entity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pitches.each do |pitch| %>
+      <tr>
+        <td><%= pitch.name %></td>
+        <td><%= pitch.normal_price %></td>
+        <td><%= pitch.special_price %></td>
+        <td><%= pitch.active %></td>
+        <td><%= pitch.other %></td>
+        <td><%= pitch.kind %></td>
+        <td><%= pitch.url1 %></td>
+        <td><%= pitch.url2 %></td>
+        <td><%= pitch.url3 %></td>
+        <td><%= pitch.entity %></td>
+        <td><%= link_to 'Show', pitch %></td>
+        <td><%= link_to 'Edit', edit_pitch_path(pitch) %></td>
+        <td><%= link_to 'Destroy', pitch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pitch', new_pitch_path %>

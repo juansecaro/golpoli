@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pitch.name %>
+</p>
+
 <p><input type="text" class="datepicker" onkeydown="return false" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off></p>
 
 <% @timetable.inspect %>
@@ -7,10 +13,16 @@
 <div id="booking" class="col-md-8"></div>
 
 <div>
- <input type="hidden" id='field_id' value='<%= @field.id %>'>
- <p id='date'> </p>
+  <input type="hidden" id='pitch_id' value='<%= @pitch.id %>'>
+  <p id='date'> </p>
 </div>
 
+<input type="button" class="btn btn-info" onclick="JSONBack();" value="¡Reserva!" />
+
+<p>
+  <strong>Entity:</strong>
+  <%= @pitch.entity %>
+</p>
 
 <form>
   <label>
@@ -38,5 +50,6 @@
   </div>
 </form>
 
-<%= link_to 'Edit', edit_field_path(@field) %> |
-<%= link_to 'Back', fields_path %>
+
+<%= link_to 'Edit', edit_pitch_path(@pitch) %> |
+<%= link_to 'Back', pitches_path %>

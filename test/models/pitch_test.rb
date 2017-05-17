@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FieldTest < ActiveSupport::TestCase
+class PitchTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

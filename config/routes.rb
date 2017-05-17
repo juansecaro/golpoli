@@ -10,17 +10,16 @@ Rails.application.routes.draw do
   get 'static_pages/testimonials'
 
 
-  resources :charges
   resources :entities
   resources :contacts
   resources :advertisers
-  resources :fields do
+  resources :pitches do
     resources :schedules
   end
 
 
-get '/horarios', to: 'fields#get_schedule'
-post '/horarios', to: 'fields#set_schedule'
+get '/horarios', to: 'pitches#get_schedule'
+post '/horarios', to: 'pitches#set_schedule'
 get ':name', to: 'entities#listf'
   # Aquí es donde objento el JSON de cada horario
 
